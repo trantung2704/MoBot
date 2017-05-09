@@ -24,7 +24,7 @@ namespace MoBot
             var sendGridMessage = new SendGridMessage
             {
                 From = new MailAddress(systemEmail),
-                To = new[] { new MailAddress("trantung04@gmail.com") },
+                To = new[] { new MailAddress("nathan@envisagesoftware.biz") },
                 Subject = "App development Quote request for Toby",
                 Html = $"Requirements {description} <br/> Contact {email} {phone}",
             };
