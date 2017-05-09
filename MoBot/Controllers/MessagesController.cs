@@ -47,7 +47,7 @@ namespace MoBot.Controllers
                 if (activity.MembersAdded.Any(m => m.Id == activity.Recipient.Id))
                 {
                     activity.Type = ActivityTypes.Message;
-                    activity.Text = "Conversation Update";
+                    activity.Text = "Hi";
                     using (var scope = DialogModule.BeginLifetimeScope(Conversation.Container, activity))
                     {
                         await Conversation.SendAsync(activity, () => scope.Resolve<IDialog<object>>());
@@ -59,7 +59,7 @@ namespace MoBot.Controllers
                 if (activity.MembersAdded.Any(m => m.Id == activity.Recipient.Id))
                 {
                     activity.Type = ActivityTypes.Message;
-                    activity.Text = "Conversation Update";
+                    activity.Text = "Hi";
                     using (var scope = DialogModule.BeginLifetimeScope(Conversation.Container, activity))
                     {
                         await Conversation.SendAsync(activity, () => scope.Resolve<IDialog<object>>());
@@ -74,7 +74,7 @@ namespace MoBot.Controllers
                 if (activity.MembersAdded.Any(m => m.Id == activity.Recipient.Id))
                 {
                     activity.Type = ActivityTypes.Message;
-                    activity.Text = "Conversation Update";
+                    activity.Text = "Hi";
                     using (var scope = DialogModule.BeginLifetimeScope(Conversation.Container, activity))
                     {
                         await Conversation.SendAsync(activity, () => scope.Resolve<IDialog<object>>());
