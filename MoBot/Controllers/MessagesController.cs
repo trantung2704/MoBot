@@ -71,14 +71,11 @@ namespace MoBot.Controllers
             }
             else if (activity.Type == ActivityTypes.Ping)
             {
-                if (activity.MembersAdded.Any(m => m.Id == activity.Recipient.Id))
+                activity.Type = ActivityTypes.Message;
+                activity.Text = "Hi";
+                using (var scope = DialogModule.BeginLifetimeScope(Conversation.Container, activity))
                 {
-                    activity.Type = ActivityTypes.Message;
-                    activity.Text = "Hi";
-                    using (var scope = DialogModule.BeginLifetimeScope(Conversation.Container, activity))
-                    {
-                        await Conversation.SendAsync(activity, () => scope.Resolve<IDialog<object>>());
-                    }
+                    await Conversation.SendAsync(activity, () => scope.Resolve<IDialog<object>>());
                 }
             }
 

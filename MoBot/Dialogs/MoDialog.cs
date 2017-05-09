@@ -65,6 +65,7 @@ namespace EnvisageBot.Dialogs
         public async Task DeleteUserData(IDialogContext context, LuisResult result)
         {
             context.UserData.Clear();
+            await context.PostAsync("User data has been deleted");
             context.Wait(MessageReceived);
         }
 
