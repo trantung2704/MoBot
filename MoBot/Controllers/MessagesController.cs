@@ -10,7 +10,7 @@ using Microsoft.Bot.Connector;
 
 namespace MoBot.Controllers
 {
-    [BotAuthentication]
+    [BotAuthentication(CredentialProviderType = typeof(MultiCredentialProvider))]
     public class MessagesController : ApiController
     {
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)

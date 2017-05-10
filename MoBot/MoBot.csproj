@@ -126,6 +126,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Start\MultiCredentialProvider .cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\MessagesController.cs" />
     <Compile Include="DataKeyManager.cs" />
